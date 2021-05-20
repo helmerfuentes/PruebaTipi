@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <form id=formId (ngSubmit)="guardar()" >
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">Nombres</label>
+                <input type="text" [(ngModel)]="miPersona.nombres" name="nomre" class="form-control" id="inputCity">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">Apellidos</label>
+                <input type="text" [(ngModel)]="miPersona.apellidos" name="apellido" class="form-control" id="inputCity">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">Edad</label>
+                <input type="number" [(ngModel)]="miPersona.edad" name="edad" class="form-control" id="inputCity">
+              </div>
+            </div>
+            <br>
+            <input  class="btn btn-primary" (click)="guardar()"  name="numero" value="  Guardar" type="button">
+            <button class="btn btn-info" routerLink="/login" >otra pagina</button>
+          </form>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+<div class="col-12">
+  <div class="card">
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of personas"  >
+
+            <td>{{item.nombres}}</td>
+            <td>{{item.apellidos}}</td>
+            <td>{{item.edad}}</td>
+            <td>
+              <button (click)="eliminar(item.id)" >Eliminar</button>
+              <button (click)="detalle(item.id)" >Actualizar</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+  </div>
+</div>

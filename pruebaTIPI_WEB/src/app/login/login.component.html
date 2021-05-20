@@ -1,0 +1,19 @@
+<form id=formId (ngSubmit)="buscar()" >
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Count</label>
+      <input type="number" [(ngModel)]="numero" name="numero"  class="form-control" id="inputCity">
+    </div>
+  </div>
+  <br>
+  <input class="btn btn-primary" type="submit" value="buscar">
+  <button routerLink="/base" class="btn btn-info" >otra pagina</button>
+
+</form>
+
+<br>
+<h2>
+  {{myvector}}
+
+</h2>
